@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Remote Control</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style media="screen">
+      .audio{
+        font-family: Raleway!important;
+        font-size: 3em!important;
+        width: 45%;
+        height: 5em;
+        margin: 0.5em!important;
+        border-radius: 3%!important;
+      }
+      .left-click,.right-click{
+        font-family: Raleway!important;
+        font-size: 3em!important;
+        width: 28%;
+        height: 3.5em;
+        margin: 0.5em!important;
+        border-radius: 5%!important;
+      }
+      .arrow{
+        width: 20%;
+      }
+      form{
+        display: inline;
+      }
+      .zero{
+        width: 69%;
+      }
+      .shut{
+        width: 93%;
+      }
+      .mouse-area{
+        border: 0.5em solid white;
+        border-radius: 2em;
+        height: 65em;
+        margin: 2em;
+      }
+      i{
+        margin: 0!important;
+      }
+      .mou{
+        border-radius: 10%!important;
+        width: 6em;
+        height: 6em;
+      }
+    </style>
+  </head>
+  <body style="background-color: black;">
+        <form action="/up" method="POST">
+          <button class="ui massive orange button audio">Volume Up</button>
+        </form>
+        <form action="/down" method="POST">
+          <button class="ui massive yellow button audio">Volume Down</button>
+        </form>
+        <form action="/mute" method="POST">
+          <button class="ui massive olive button audio">Mute</button>
+        </form>
+        <form action="/play" method="POST">
+          <button class="ui massive green button audio">Play</button>
+        </form>
+        <form action="/stop" method="POST">
+          <button class="ui massive teal button audio">Stop</button>
+        </form>
+        <form action="/previous" method="POST">
+          <button class="ui massive blue button audio">Previous</button>
+        </form>
+
+        <div class="mouse-area">
+          <div class="ui two column centered grid">
+            <div class="column"></div>
+            <div class="four column centered row">
+              <div class="column">
+                <form id="mouse" action="/leftmouse" method="POST">
+                
+                </form>
+              </div>
+              <div class="column">
+                <form id="mouse" action="/upmouse" method="POST">
+                  <button class="ui massive red button mou"><h1>U</h1></button>
+                </form>
+              </div>
+              <div class="column">
+                <form id="mouse" action="/leftmouse" method="POST">
+                
+                </form>
+              </div>
+              <div class="column">
+                <form id="mouse" action="/leftmouse" method="POST">
+                
+                </form>
+              </div>
+              <div class="column">
+                <form id="mouse" action="/leftmouse" method="POST">
+                
+                </form>
+              </div>
+              <div class="column">
+                <form id="mouse" action="/leftmouse" method="POST">
+                
+                </form>
+              </div>
+              <div class="column">
+                <form id="mouse" action="/leftmouse" method="POST">
+                <button class="ui massive red button mou"><h1>L</h1></button>
+                </form>
+              </div>
+              <div class="column">
+                <form id="mouse" action="/leftmouse" method="POST">
+                
+                </form>
+              </div>
+              <div class="column">
+                <form id="mouse" action="/rightmouse" method="POST">
+                <button class="ui massive red button mou"><h1>R</h1></button>
+                </form>
+              </div>
+              <div class="column">
+                <form id="mouse" action="/leftmouse" method="POST">
+                
+                </form>
+              </div>
+              <div class="column">
+                <form id="mouse" action="/leftmouse" method="POST">
+                
+                </form>
+              </div>
+              <div class="column">
+                <form id="mouse" action="/leftmouse" method="POST">
+                
+                </form>
+              </div>
+              <div class="column">
+                <form id="mouse" action="/downmouse" method="POST">
+                <button class="ui massive red button mou"><h1>D</h1></button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div>
+              <form action="/leftclick" method="POST">
+                <button class="ui massive teal left-click button">L</button>
+              </form>
+              <form action="/leftdclick" method="POST">
+                <button class="ui massive teal right-click button">LD</button>
+              </form>
+              <form action="/rightclick" method="POST">
+                <button class="ui massive teal right-click button">R</button>
+              </form>
+              <form action="/scrollup" method="POST">
+                <button class="ui massive orange left-click button">SU</button>
+              </form>
+              <form action="/middleclick" method="POST">
+                <button class="ui massive teal right-click button">M</button>
+              </form>
+              <form action="/scrolldown" method="POST">
+                <button class="ui massive orange right-click button">SD</button>
+              </form>
+          </div>
+          
+        </div>
+        <form action="/next" method="POST">
+          <button class="ui massive violet button audio">Next</button>
+        </form>
+        <form action="/pagedown" method="POST">
+          <button class="ui massive red button audio unused">Page Down</button>
+        </form>
+        <form action="/uparrow" method="POST">
+          <button class="ui massive orange button audio arrow">U</button>
+        </form>
+        <form action="/downarrow" method="POST">
+          <button class="ui massive yellow button audio arrow">D</button>
+        </form>
+        <form action="/leftarrow" method="POST">
+          <button class="ui massive olive button audio arrow">L</button>
+        </form>
+        <form action="/rightarrow" method="POST">
+          <button class="ui massive green button audio arrow">R</button>
+        </form>
+        <form action="/backspace" method="POST">
+          <button class="ui massive violet button audio">Backspace</button>
+        </form>
+        <form action="/delete" method="POST">
+          <button class="ui massive olive button audio">Delete</button>
+        </form>
+        <form action="/enter" method="POST">
+          <button class="ui massive green button audio">Enter</button>
+        </form>
+        <form action="/escape" method="POST">
+          <button class="ui massive red button audio">Escape</button>
+        </form>
+        <form action="/control" method="POST">
+          <button class="ui massive violet button audio">Control</button>
+        </form>
+        <form action="/shift" method="POST">
+          <button class="ui massive olive button audio">Shift</button>
+        </form>
+        <form action="/rshift" method="POST">
+          <button class="ui massive green button audio">R-Shift</button>
+        </form>
+        <form action="/space" method="POST">
+          <button class="ui massive red button audio">space</button>
+        </form>
+        <form action="/one" method="POST">
+          <button class="ui massive orange button audio arrow">1</button>
+        </form>
+        <form action="/two" method="POST">
+          <button class="ui massive yellow button audio arrow">2</button>
+        </form>
+        <form action="/three" method="POST">
+          <button class="ui massive olive button audio arrow">3</button>
+        </form>
+        <form action="/four" method="POST">
+          <button class="ui massive green button audio arrow">4</button>
+        </form>
+        <form action="/five" method="POST">
+          <button class="ui massive orange button audio arrow">5</button>
+        </form>
+        <form action="/six" method="POST">
+          <button class="ui massive yellow button audio arrow">6</button>
+        </form>
+        <form action="/seevn" method="POST">
+          <button class="ui massive olive button audio arrow">7</button>
+        </form>
+        <form action="/eight" method="POST">
+          <button class="ui massive green button audio arrow">8</button>
+        </form>
+        <form action="/nine" method="POST">
+          <button class="ui massive teal button audio arrow">9</button>
+        </form>
+        <form action="/zero" method="POST">
+          <button class="ui massive red button audio zero">0</button>
+        </form>
+        <button class="ui massive blue button audio shut" style="text-align: center;">
+          <a href="http://192.168.1.105:5709" style="text-decoration: none; color: white;">
+            Shut Down
+          </a>
+        </button>
+  </body>
+</html>
